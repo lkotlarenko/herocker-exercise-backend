@@ -1,5 +1,5 @@
 build:
   docker:
-    web: Dockerfile
+    web: DockerFile
 run:
   web: node src/api/server.js
