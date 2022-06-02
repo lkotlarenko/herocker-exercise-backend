@@ -1,23 +1,30 @@
+require('dotenv/config');
+
+const { DB_USERNAME, PASSWORD_POSTGRES, DATABASE, HOST, DB_PORT } = process.env;
+
 module.exports = {
   development: {
-    username: 'root',
-    password: null,
-    database: 'database_development',
-    host: '127.0.0.1',
+    username: DB_USERNAME,
+    password: PASSWORD_POSTGRES,
+    database: DATABASE,
+    host: HOST,
+    port: DB_PORT,
     dialect: 'postgres',
   },
   test: {
-    username: 'root',
-    password: null,
-    database: 'database_test',
-    host: '127.0.0.1',
+    username: DB_USERNAME,
+    password: PASSWORD_POSTGRES,
+    database: DATABASE,
+    host: HOST,
+    port: DB_PORT,
     dialect: 'postgres',
   },
   production: {
-    username: 'root',
-    password: null,
-    database: 'database_test',
-    host: '127.0.0.1',
+    username: DB_USERNAME,
+    password: PASSWORD_POSTGRES,
+    database: DATABASE,
+    host: HOST,
+    port: DB_PORT,
     dialect: 'postgres',
   },
 };
